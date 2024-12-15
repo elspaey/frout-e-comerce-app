@@ -1,16 +1,33 @@
 // ignore_for_file: prefer_single_quotes
 class Assets {
   Assets._();
-
-  /// Assets for imagesFreepikCirclesInject5
-  /// assets/images/freepik--Circles--inject-5.svg
+  
+  /// Assets for imagesCircles
+  /// assets/images/Circles.svg
   static const String imagesCircles = "assets/images/Circles.svg";
-
-  /// Assets for imagesFreepikPlantInject63
-  /// assets/images/freepik--Plant--inject-63.svg
-  static const String imagesPlant = "assets/images/Plant.svg";
 
   /// Assets for imagesLogo
   /// assets/images/logo.svg
   static const String imagesLogo = "assets/images/logo.svg";
+
+  /// Assets for imagesPageViewPage1Background
+  /// assets/images/pageView-page1-background.svg
+  static const String imagesPageViewPage1Background = "assets/images/pageView-page1-background.svg";
+
+  /// Assets for imagesPageViewPage1Image
+  /// assets/images/pageView-page1-image.svg
+  static const String imagesPageViewPage1Image = "assets/images/pageView-page1-image.svg";
+
+  /// Assets for imagesPageViewPage2Background
+  /// assets/images/pageView-page2-background.svg
+  static const String imagesPageViewPage2Background = "assets/images/pageView-page2-background.svg";
+
+  /// Assets for imagesPageViewPage2Image
+  /// assets/images/pageView-page2-image.svg
+  static const String imagesPageViewPage2Image = "assets/images/pageView-page2-image.svg";
+
+  /// Assets for imagesPlant
+  /// assets/images/Plant.svg
+  static const String imagesPlant = "assets/images/Plant.svg";
 }
+

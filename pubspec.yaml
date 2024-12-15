@@ -30,11 +30,15 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.8
   dio: ^5.7.0
+  dots_indicator: ^3.0.0
   flutter:
     sdk: flutter
   flutter_launcher_icons: ^0.14.2
   flutter_lints: ^5.0.0
+  flutter_localizations:
+    sdk: flutter
   flutter_svg: ^2.0.16
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:
@@ -91,7 +95,9 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 flutter_assets:
- assets_path: assets/images/
- output_path: lib/core/utils/
- filename: assets_imeges_class.dart
- field_prefix:
+  assets_path: assets/images/
+  output_path: lib/core/utils/
+  filename: assets_imeges_class.dart
+  field_prefix: null
+flutter_intl:
+  enabled: true
