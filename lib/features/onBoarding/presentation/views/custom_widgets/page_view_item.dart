@@ -8,10 +8,12 @@ class PageViewItem extends StatelessWidget {
       required this.image,
       required this.backGroundImage,
       required this.subtitle,
-      required this.title});
+      required this.title,
+      required this.isVisable});
   final String image, backGroundImage;
   final String subtitle;
   final Widget title;
+  final bool isVisable;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -35,19 +37,22 @@ class PageViewItem extends StatelessWidget {
                   image,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(16),
-                child: Text("تخط"),
+              Visibility(
+                visible: isVisable,
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Text("تخط"),
+                ),
               )
             ],
           ),
         ),
         SizedBox(
-          height: 10,
+          height: 5,
         ),
         title,
         SizedBox(
-          height: 20,
+          height: 5,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -56,7 +61,7 @@ class PageViewItem extends StatelessWidget {
             style: Styles.textStyleSemibold13,
             textAlign: TextAlign.center,
           ),
-        )
+        ),
       ],
     );
   }

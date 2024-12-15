@@ -5,13 +5,19 @@ import 'package:frout_ecomerce_app/core/utils/assets_imeges_class.dart';
 import 'package:frout_ecomerce_app/features/onBoarding/presentation/views/custom_widgets/page_view_item.dart';
 
 class onBoardingPageView extends StatelessWidget {
-  const onBoardingPageView({super.key});
+  const onBoardingPageView({super.key, required this.pageController});
+  final PageController pageController;
 
   @override
   Widget build(BuildContext context) {
     return PageView(
+      controller: pageController,
       children: [
         PageViewItem(
+            isVisable: (pageController.hasClients
+                    ? pageController.page!.round() == 0
+                    : 0) ==
+                0,
             image: Assets.imagesPageViewPage1Image,
             backGroundImage: Assets.imagesPageViewPage1Background,
             subtitle:
@@ -36,6 +42,9 @@ class onBoardingPageView extends StatelessWidget {
               ],
             )),
         PageViewItem(
+          isVisable:
+              (pageController.hasClients ? pageController.page!.round() : 0) !=
+                  0,
           image: Assets.imagesPageViewPage2Image,
           backGroundImage: Assets.imagesPageViewPage2Background,
           subtitle:
