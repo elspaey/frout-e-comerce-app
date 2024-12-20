@@ -9,6 +9,7 @@ abstract class Styles {
       TextStyle(fontSize: 16, fontWeight: FontWeight.w400);
   static const textStyleSemibold11 =
       TextStyle(fontSize: 11, fontWeight: FontWeight.w600);
+  //  textStyleSemibold13 = the most
   static const textStyleSemibold13 =
       TextStyle(fontSize: 13, fontWeight: FontWeight.w600);
   static const textStyleSemibold16 =
