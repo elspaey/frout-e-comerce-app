@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:frout_ecomerce_app/core/constants.dart';
 import 'package:frout_ecomerce_app/core/helper_classes/styles.dart';
+import 'package:frout_ecomerce_app/core/services/shared_prefrence_singleton.dart';
+import 'package:frout_ecomerce_app/features/auth/presentation/views/login_page.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem(
@@ -9,11 +12,11 @@ class PageViewItem extends StatelessWidget {
       required this.backGroundImage,
       required this.subtitle,
       required this.title,
-      required this.isVisable});
+      required this.isVisible});
   final String image, backGroundImage;
   final String subtitle;
   final Widget title;
-  final bool isVisable;
+  final bool isVisible;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -38,10 +41,17 @@ class PageViewItem extends StatelessWidget {
                 ),
               ),
               Visibility(
-                visible: isVisable,
-                child: Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: Text("تخط"),
+                visible: isVisible,
+                child: GestureDetector(
+                  onTap: () {
+                    prefs.setBool(KIsOnBoardingViewSeen, true);
+                    Navigator.of(context)
+                        .pushReplacementNamed(LoginPage.routeName);
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Text("تخط"),
+                  ),
                 ),
               )
             ],
