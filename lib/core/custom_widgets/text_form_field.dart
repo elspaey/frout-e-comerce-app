@@ -7,14 +7,16 @@ class CustomTextFormField extends StatelessWidget {
       {super.key,
       required this.theHintText,
       required this.textType,
-      this.suffixIcon});
+      this.suffixIcon,
+      this.thePadding});
   final String theHintText;
   final TextInputType textType;
   final Widget? suffixIcon;
+  final EdgeInsetsGeometry? thePadding;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      padding: thePadding ?? const EdgeInsets.symmetric(horizontal: 16),
       child: TextFormField(
         keyboardType: textType,
         decoration: InputDecoration(
