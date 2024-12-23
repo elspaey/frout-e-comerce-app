@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "856093190880",
+    "project_id": "android-flutter-fruit",
+    "storage_bucket": "android-flutter-fruit.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856093190880:android:8adc15dc5fb67a0661be85",
+        "android_client_info": {
+          "package_name": "com.example.frout_ecomerce_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtKwJox2Egcl5qJYTQ0SvzsQy7NXM8eFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

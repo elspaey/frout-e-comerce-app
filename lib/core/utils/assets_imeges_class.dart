@@ -6,6 +6,14 @@ class Assets {
   /// assets/images/apple-Icons.svg
   static const String imagesAppleIcons = "assets/images/apple-Icons.svg";
 
+  /// Assets for imagesArrowEllipse
+  /// assets/images/ArrowEllipse.svg
+  static const String imagesArrowEllipse = "assets/images/ArrowEllipse.svg";
+
+  /// Assets for imagesCheckedIcon
+  /// assets/images/checked-Icon.svg
+  static const String imagesCheckedIcon = "assets/images/checked-Icon.svg";
+
   /// Assets for imagesCircles
   /// assets/images/Circles.svg
   static const String imagesCircles = "assets/images/Circles.svg";

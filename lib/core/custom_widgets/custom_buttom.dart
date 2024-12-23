@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frout_ecomerce_app/core/constants.dart';
 import 'package:frout_ecomerce_app/core/utils/app_color.dart';
 
 class CustomButtom extends StatelessWidget {
@@ -23,7 +24,7 @@ class CustomButtom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: thPadding ?? EdgeInsets.symmetric(horizontal: 16),
+      padding: thPadding ?? EdgeInsets.symmetric(horizontal: kHorizontalPadding),
       child: SizedBox(
         height: theHight ?? 54,
         width: theWidth ?? double.infinity,

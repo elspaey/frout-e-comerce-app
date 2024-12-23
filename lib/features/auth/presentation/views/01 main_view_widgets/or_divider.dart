@@ -15,7 +15,7 @@ class OrDivider extends StatelessWidget {
             child: Center(
                 child: Text(
               "أو",
-              style: Styles.textStyleSemibold16,
+              style: AppStyle.textStyleSemibold16,
             ))),
         Expanded(child: Divider()),
       ],

@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:frout_ecomerce_app/core/constants.dart';
 import 'package:frout_ecomerce_app/core/helper_classes/styles.dart';
 import 'package:frout_ecomerce_app/core/services/shared_prefrence_singleton.dart';
-import 'package:frout_ecomerce_app/features/auth/presentation/views/login_page.dart';
+import 'package:frout_ecomerce_app/features/auth/presentation/views/login_page/login_page.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem(
@@ -65,10 +65,10 @@ class PageViewItem extends StatelessWidget {
           height: 5,
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
           child: Text(
             subtitle,
-            style: Styles.textStyleSemibold13,
+            style: AppStyle.textStyleSemibold13,
             textAlign: TextAlign.center,
           ),
         ),

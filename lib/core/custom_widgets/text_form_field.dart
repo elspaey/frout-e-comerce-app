@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frout_ecomerce_app/core/constants.dart';
 import 'package:frout_ecomerce_app/core/helper_classes/styles.dart';
 import 'package:frout_ecomerce_app/core/utils/app_color.dart';
 
@@ -16,12 +17,12 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: thePadding ?? const EdgeInsets.symmetric(horizontal: 16),
+      padding: thePadding ?? const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
       child: TextFormField(
         keyboardType: textType,
         decoration: InputDecoration(
             hintText: theHintText,
-            hintStyle: Styles.textStyleBold13,
+            hintStyle: AppStyle.textStyleBold13,
             suffixIcon: suffixIcon,
             filled: true,
             fillColor: AppColor.secondryColor,

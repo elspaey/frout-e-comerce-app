@@ -24,16 +24,16 @@ class onBoardingPageView extends StatelessWidget {
               children: [
                 Text(
                   "مرحبًا بك في",
-                  style: Styles.textStyleBold23,
+                  style: AppStyle.textStyleBold23,
                 ),
                 Text(
                   " HUB",
-                  style:
-                      Styles.textStyleBold23.copyWith(color: Color(0xffF1A934)),
+                  style: AppStyle.textStyleBold23
+                      .copyWith(color: Color(0xffF1A934)),
                 ),
                 Text(
                   " Fruit",
-                  style: Styles.textStyleBold23
+                  style: AppStyle.textStyleBold23
                       .copyWith(color: AppColor.primaryColor),
                 ),
               ],
@@ -45,7 +45,7 @@ class onBoardingPageView extends StatelessWidget {
           subtitle:
               'نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية',
           title: Text('ابحث وتسوق',
-              textAlign: TextAlign.center, style: Styles.textStyleBold23),
+              textAlign: TextAlign.center, style: AppStyle.textStyleBold23),
         ),
       ],
     );
