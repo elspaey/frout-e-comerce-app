@@ -1,13 +1,16 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:frout_ecomerce_app/core/constants.dart';
-import 'package:frout_ecomerce_app/core/custom_function/auto_generate_routs.dart';
+import 'package:frout_ecomerce_app/core/helper_classes/get_it.dart';
 import 'package:frout_ecomerce_app/core/services/shared_prefrence_singleton.dart';
+import 'package:frout_ecomerce_app/core/simple_bloc_observer.dart';
 import 'package:frout_ecomerce_app/core/utils/app_color.dart';
-import 'package:frout_ecomerce_app/features/auth/presentation/views/login_page/login_page.dart';
 import 'package:frout_ecomerce_app/firebase_options.dart';
 
+import 'core/Functions/auto_generate_routs.dart';
+import 'features/auth/presentation/views/login_view/login_view.dart';
 import 'generated/l10n.dart';
 
 void main() async {
@@ -15,8 +18,9 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  WidgetsFlutterBinding.ensureInitialized();
   await prefs.init();
+  setupGetIt();
+  Bloc.observer = SimpleBlocObserver();
   runApp(const fruitApp());
 }
 
@@ -45,7 +49,8 @@ class fruitApp extends StatelessWidget {
             fontFamily: kCairoFont),
         debugShowCheckedModeBanner: false,
         onGenerateRoute: ongenerateRout,
-        initialRoute: LoginPage.routeName,
+        // initialRoute: Splashview.routeName,
+        initialRoute: LoginView.routeName,
         // home: Testview(),
       ),
     );

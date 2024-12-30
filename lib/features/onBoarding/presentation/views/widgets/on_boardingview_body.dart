@@ -2,9 +2,10 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:frout_ecomerce_app/core/constants.dart';
 import 'package:frout_ecomerce_app/core/utils/app_color.dart';
-import 'package:frout_ecomerce_app/core/custom_widgets/custom_buttom.dart';
-import 'package:frout_ecomerce_app/features/auth/presentation/views/login_page/login_page.dart';
+import 'package:frout_ecomerce_app/features/auth/presentation/views/login_view/login_view.dart';
 import 'package:frout_ecomerce_app/features/onBoarding/presentation/views/widgets/on_boarding_page_view.dart';
+
+import '../../../../../core/Widgets/custom_buttom.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
@@ -61,7 +62,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             child: CustomButtom(
                 onPressed: () {
                   Navigator.of(context)
-                      .pushReplacementNamed(LoginPage.routeName);
+                      .pushReplacementNamed(LoginView.routeName);
                 },
                 text: "ابدأ الأن"),
           ),
