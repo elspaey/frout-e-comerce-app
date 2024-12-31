@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:frout_ecomerce_app/core/constants.dart';
 import 'package:frout_ecomerce_app/core/services/shared_prefrence_singleton.dart';
 import 'package:frout_ecomerce_app/core/utils/assets_imeges_class.dart';
-import 'package:frout_ecomerce_app/features/auth/presentation/views/login_page/login_page.dart';
+import 'package:frout_ecomerce_app/features/auth/presentation/views/login_view/login_view.dart';
 import 'package:frout_ecomerce_app/features/onBoarding/presentation/views/on_boarding_view.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -40,12 +40,13 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         ),
       ],
     );
-  }     
+  }
+
   void excuteNavigation() {
     bool isOnBoardingViewSeen = prefs.getBool(KIsOnBoardingViewSeen);
     Future.delayed(Duration(seconds: 4), () {
       if (isOnBoardingViewSeen) {
-        Navigator.pushReplacementNamed(context, LoginPage.routeName);
+        Navigator.pushReplacementNamed(context, LoginView.routeName);
       } else {
         Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
       }

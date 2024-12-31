@@ -28,7 +28,7 @@ class HaveOrNotHaveAnAccount extends StatelessWidget {
         ),
         GestureDetector(
             onTap: () {
-              Navigator.pushNamed(context, SignUpPage.routName);
+              Navigator.pushNamed(context, SignUpView.routName);
             },
             child: Text.rich(TextSpan(
               recognizer: onTap,

@@ -9,16 +9,29 @@ class CustomTextFormField extends StatelessWidget {
       required this.theHintText,
       required this.textType,
       this.suffixIcon,
-      this.thePadding});
+      this.thePadding,
+      this.onSaved,
+      this.obscureText = false});
   final String theHintText;
   final TextInputType textType;
   final Widget? suffixIcon;
   final EdgeInsetsGeometry? thePadding;
+  final void Function(String?)? onSaved;
+  final bool obscureText;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: thePadding ?? const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+      padding: thePadding ??
+          const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
       child: TextFormField(
+        obscureText: obscureText,
+        onSaved: onSaved,
+        validator: (ValidateValue) {
+          if (ValidateValue?.isEmpty ?? true) {
+            return "field is required";
+          }
+          return null;
+        },
         keyboardType: textType,
         decoration: InputDecoration(
             hintText: theHintText,

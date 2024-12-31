@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:frout_ecomerce_app/core/constants.dart';
 import 'package:frout_ecomerce_app/core/helper_classes/styles.dart';
 import 'package:frout_ecomerce_app/core/services/shared_prefrence_singleton.dart';
-import 'package:frout_ecomerce_app/features/auth/presentation/views/login_page/login_page.dart';
+import 'package:frout_ecomerce_app/features/auth/presentation/views/login_view/login_view.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem(
@@ -46,7 +46,7 @@ class PageViewItem extends StatelessWidget {
                   onTap: () {
                     prefs.setBool(KIsOnBoardingViewSeen, true);
                     Navigator.of(context)
-                        .pushReplacementNamed(LoginPage.routeName);
+                        .pushReplacementNamed(LoginView.routeName);
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(16),

@@ -4,8 +4,8 @@ import 'package:frout_ecomerce_app/core/utils/app_color.dart';
 import 'package:frout_ecomerce_app/features/auth/presentation/views/sign_up_page/sign_up_widgets/custom_check_box.dart';
 
 class TermsAndCondationsWidget extends StatefulWidget {
-  const TermsAndCondationsWidget({super.key});
-
+  const TermsAndCondationsWidget({super.key, required this.onChanged});
+  final ValueChanged<bool> onChanged;
   @override
   State<TermsAndCondationsWidget> createState() =>
       _TermsAndCondationsWidgetState();
@@ -21,6 +21,7 @@ class _TermsAndCondationsWidgetState extends State<TermsAndCondationsWidget> {
         CustomCheckBox(
           onChecked: (value) {
             isTermsAccepted = value;
+            widget.onChanged(value);
             setState(() {});
           },
           isChecked: isTermsAccepted,
